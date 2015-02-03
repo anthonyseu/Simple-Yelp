@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
                 <outlet property="businessTableView" destination="HMR-34-WiQ" id="IpN-yq-mby"/>
+                <outlet property="mapView" destination="bm6-wW-3e6" id="G2A-kc-HPP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,19 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HMR-34-WiQ">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bm6-wW-3e6" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HMR-34-WiQ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="HMR-34-WiQ" secondAttribute="bottom" id="Bp5-mp-9uM"/>
-                <constraint firstAttribute="trailing" secondItem="HMR-34-WiQ" secondAttribute="trailing" id="EBY-kr-0Jb"/>
-                <constraint firstItem="HMR-34-WiQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gVl-ux-KfV"/>
-                <constraint firstItem="HMR-34-WiQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uhh-Nm-Qaj"/>
-            </constraints>
-            <point key="canvasLocation" x="428" y="389"/>
+            <point key="canvasLocation" x="451" y="541"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

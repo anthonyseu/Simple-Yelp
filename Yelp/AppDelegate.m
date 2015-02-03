@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
+
+NSString * const kGMSApiKey = @"AIzaSyA9MREDMk898zlmpZhJyp9yRZA1ecn3HxI";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [GMSServices provideAPIKey:kGMSApiKey];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // set styles for status bar and nav bar
@@ -21,8 +25,9 @@
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.85 green:0.02 blue:0.02 alpha:1]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
-    
+    UINavigationController *nvc =[[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    nvc.navigationBar.translucent=NO;
+    self.window.rootViewController = nvc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
