@@ -144,6 +144,7 @@ GMSMapView *mapView_;
 }
 
 - (void)addMarker {
+    [self.mapView clear];
     for (Business *business in self.businesses) {
         GMSMarker *marker = [[GMSMarker alloc] init];
         marker.position = CLLocationCoordinate2DMake(business.latitude, business.longitude);
