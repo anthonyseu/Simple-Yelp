@@ -2,7 +2,7 @@
 
 ## Yelp
 
-This is a Yelp search app using the [Yelp API](http://developer.rottentomatoes.com/docs/read/JSON).
+This is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/overview).
 
 Time spent: 18
 
